@@ -6,6 +6,8 @@
 
 # HP-250-G6-Kabylake
 
+![infocatalina](./Screenshot/1.jpg)
+
 ### Computer Spec:
 
 | Component        | Brank                              |
@@ -20,9 +22,8 @@
 | SmBios           | MacbookPro 14,1                    |
 | BootLoader       | OpenCore 0.7.4                     |
 
-![infocatalina](./Screenshot/1.jpg)
 
-![infobigsur](./Screenshot/2.jpg) ![infobigsur](./Screenshot/3.jpg) 
+![infobigsur](./Screenshot/2.jpg) 
 
 ## DPCIManager Screenshot
 
