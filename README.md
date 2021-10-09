@@ -1,0 +1,1 @@
+# HP-250-G6-Kabylake
