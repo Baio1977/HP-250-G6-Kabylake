@@ -27,20 +27,20 @@
 
 ## DPCIManager Screenshot
 
-![infodp1](./Screenshot/6.png)
-![infodp2](./Screenshot/7.png)
+![infodp1](./Screenshot/3.png)
+![infodp2](./Screenshot/4.png)
 
 ### What works and What doesn't or WIP:
 
 - [x] Intel HD 620 iGPU HDMI Output
-- [x] ALC236 Internal Speakers
-- [x] ALC236 Native Combojack (headphones no work)
-- [x] ALC236 HDMI Audio Output
+- [x] ALC282 Internal Speakers
+- [x] ALC282 Native Combojack
+- [x] ALC282 HDMI Audio Output
 - [x] All USB Ports 
 - [x] SpeedStep / Sleep / Wake
 - [x] Touchpad with gesture
 - [x] Brightness Key
-- [x] Wi-Fi and Bluetooth Intel Module
+- [x] Wi-Fi
 - [x] Realtek RTL8111 LAN
 - [x] Cardreader
 - [x] ACPI Battery
@@ -53,9 +53,9 @@
 - Disabled unused device
 - Cosmetics DSM in Configplist
 
-## Info Section Screenshot
+## Info Section HDMI video
 
-![pcisection](./Screenshot/4.png)
+![pcisection](./Screenshot/5.png)
 
 ## Info Section SSDT
 
