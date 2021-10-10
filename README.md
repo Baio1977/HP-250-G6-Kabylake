@@ -59,9 +59,9 @@
 
 ## Info Section SSDT
 
-![SSDT Dell Inspiron 5584](./Screenshot/7.jpg)
+![SSDT HP 250 G6](./Screenshot/7.png)
 
-![SSDT Dell Inspiron 5584](./Screenshot/8.png)
+![SSDT HP 250 G6](./Screenshot/8.png)
 
 ## Credits
 
