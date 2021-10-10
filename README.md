@@ -14,7 +14,7 @@
 | ---------------- | ---------------------------------- |
 | CPU              | Intel I3 7020U                     |
 | iGPU             | Intel® HD Graphics 620             |
-| Display          | 1920x1080                          |
+| Display          | 1366x768                           |
 | Audio            | Realtek ALC236                     |
 | Ram              | 8 Gb ddr4 2400 Mhz                 |
 | Wifi + Bluetooth | AC 3160.                           |
@@ -32,17 +32,17 @@
 
 ### What works and What doesn't or WIP:
 
-- [x] Intel UHD 620 iGPU HDMI Output
+- [x] Intel HD 620 iGPU HDMI Output
 - [x] ALC236 Internal Speakers
 - [x] ALC236 Native Combojack (headphones no work)
 - [x] ALC236 HDMI Audio Output
 - [x] All USB Ports 
 - [x] SpeedStep / Sleep / Wake
-- [x] I2C Touchpad with gesture
+- [x] Touchpad with gesture
 - [x] Brightness Key
-- [x] Wi-Fi and Bluetooth BCM943602BAED Module
-- [x] Realtek RTL8100 LAN
-- [x] USB Cardreader
+- [x] Wi-Fi and Bluetooth Intel Module
+- [x] Realtek RTL8111 LAN
+- [x] Cardreader
 - [x] ACPI Battery
 - [x] NVRAM
 - [x] Windows boot from OpenCore
@@ -56,10 +56,6 @@
 ## Info Section Screenshot
 
 ![pcisection](./Screenshot/4.png)
-
-## Info Section HDMI Output
-
-![pcisection](./Screenshot/8.png)
 
 ## Info Section SSDT
 
