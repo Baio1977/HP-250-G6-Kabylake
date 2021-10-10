@@ -27,8 +27,8 @@
 
 ## DPCIManager Screenshot
 
-![infodp1](./Screenshot/3.png)
-![infodp2](./Screenshot/4.png)
+![infodp1](./Screenshot/3.jpg)
+![infodp2](./Screenshot/4.jpg)
 
 ### What works and What doesn't or WIP:
 
@@ -55,7 +55,7 @@
 
 ## Info Section HDMI video
 
-![pcisection](./Screenshot/5.png)
+![pcisection](./Screenshot/5.jpg)
 
 ## Info Section SSDT
 
