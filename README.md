@@ -15,9 +15,9 @@
 | CPU              | Intel I3 7020U                     |
 | iGPU             | Intel® HD Graphics 620             |
 | Display          | 1366x768                           |
-| Audio            | Realtek ALC236                     |
+| Audio            | Realtek ALC282                     |
 | Ram              | 8 Gb ddr4 2400 Mhz                 |
-| Wifi + Bluetooth | AC 3160.                           |
+| Wifi + Bluetooth | AC 3168                            |
 | SSD              | Kingston A400 512gb                |
 | SmBios           | MacbookPro 14,1                    |
 | BootLoader       | OpenCore 0.7.4                     |
