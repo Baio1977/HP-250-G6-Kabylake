@@ -59,7 +59,7 @@
 
 ## Info Section SSDT
 
-![SSDT Dell Inspiron 5584](./Screenshot/5.png)
+![SSDT Dell Inspiron 5584](./Screenshot/6.jpg)
 
 ![SSDT Dell Inspiron 5584](./Screenshot/9.png)
 
