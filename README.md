@@ -55,7 +55,7 @@
 
 ## Info Section HDMI video
 
-![pcisection](./Screenshot/5.jpg)
+![pcisection](./Screenshot/5.png)
 
 ## Info Section SSDT
 
