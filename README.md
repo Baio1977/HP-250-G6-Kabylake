@@ -5,10 +5,10 @@
 [![](https://img.shields.io/badge/Instagram-HackintoshLifeIT-informational?style=flat&logo=instagram&logoColor=white&color=8a178a)](https://www.instagram.com/hackintoshlife.it_official/)
 
 # HP-250-G6-Kabylake
-
 ![infocatalina](./Screenshot/1.jpg)
 
-### Computer Spec:
+## IMPORTANT: minimum Bios version F73:
+- Original ACPI have integrated Device AWAC and RTC Method _STA=Zero.
 
 | Component        | Brank                              |
 | ---------------- | ---------------------------------- |
@@ -26,12 +26,10 @@
 ![infobigsur](./Screenshot/2.jpg) 
 
 ## DPCIManager Screenshot
-
 ![infodp1](./Screenshot/3.jpg)
 ![infodp2](./Screenshot/4.jpg)
 
 ### What works and What doesn't or WIP:
-
 - [x] Intel HD 620 iGPU HDMI Output
 - [x] ALC282 Internal Speakers
 - [x] ALC282 Native Combojack
@@ -48,27 +46,21 @@
 - [x] Windows boot from OpenCore
 
 ### Special Config:
-
 - Usb port mapping performed
 - Disabled unused device
 - Cosmetics DSM in Configplist
 
 ## Info Section HDMI video
-
 ![pcisection](./Screenshot/5.png)
 
 ## Info Section Power
-
 ![pcisection](./Screenshot/6.png)
 
 ## Info Section SSDT
-
 ![SSDT HP 250 G6](./Screenshot/7.png)
-
 ![SSDT HP 250 G6](./Screenshot/8.png)
 
 ## Credits
-
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and all the lovely hackintosh work.
 - [Apple](https://apple.com) for macOS;
 - [Dortania](https://github.com/dortania)
