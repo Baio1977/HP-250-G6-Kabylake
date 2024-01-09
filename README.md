@@ -7,7 +7,7 @@
 # HP-250-G6-Kabylake
 ![infocatalina](./Screenshot/1.jpg)
 
-## IMPORTANT: minimum Bios version F73:
+## IMPORTANT: minimum Bios version F73
 - Original ACPI have integrated Device AWAC and RTC Method _STA=Zero.
 
 
