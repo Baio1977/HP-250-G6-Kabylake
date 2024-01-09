@@ -10,6 +10,7 @@
 ## IMPORTANT: minimum Bios version F73:
 - Original ACPI have integrated Device AWAC and RTC Method _STA=Zero.
 
+
 | Component        | Brank                              |
 | ---------------- | ---------------------------------- |
 | CPU              | Intel I3 7020U                     |
