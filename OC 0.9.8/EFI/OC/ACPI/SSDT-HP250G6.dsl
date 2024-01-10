@@ -1,27 +1,29 @@
 DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
 {
     External (_PR_.PR00, ProcessorObj)
-    External (_SB_.AWAC._STA, UnknownObj)
+    External (_SB_.AWAC, DeviceObj)
     External (_SB_.PCI0, DeviceObj)
     External (_SB_.PCI0.GFX0, DeviceObj)
     External (_SB_.PCI0.LPCB, DeviceObj)
     External (_SB_.PCI0.LPCB.ACAD, DeviceObj)
-    External (_SB_.PCI0.LPCB.RTC_._STA, UnknownObj)
+    External (_SB_.PCI0.LPCB.RTC_, DeviceObj)
+    External (_SB_.PCI0.LPCB.RTC_.XSTA, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.SBUS, DeviceObj)
+    External (BDDD, IntObj)
     External (ECON, IntObj)
     External (HPTE, IntObj)
+    External (USTC, IntObj)
     External (XPRW, MethodObj)    // 2 Arguments
 
     Scope (\)
     {
         If (_OSI ("Darwin"))
         {
-            \_SB.AWAC._STA = Zero
-            \_SB.PCI0.LPCB.RTC._STA = 0x0F
-            ECON = One
-            HPTE = Zero
+            ECON = One //Enable PWRB
+            HPTE = Zero //Disable HPET
+            USTC = One //Enable UBTC
         }
-
+        // Fix CPU PM
         Scope (_PR)
         {
             Scope (PR00)
@@ -47,11 +49,20 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
                 }
             }
         }
-
         Scope (_SB)
         {
+            // Disable AWAC
+            Scope (AWAC)
+            {
+                If (_OSI ("Darwin"))
+                {
+                    BDDD = 0x02
+                }
+            }
+
             Scope (PCI0)
             {
+                //Add Device
                 Device (GAUS)
                 {
                     Name (_ADR, 0x00080000)  // _ADR: Address
@@ -67,7 +78,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
                         }
                     }
                 }
-
+                //Add Device
                 Scope (GFX0)
                 {
                     Device (PNLF)
@@ -90,7 +101,8 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
                 }
 
                 Scope (LPCB)
-                {
+                {   
+                    //Fix AC
                     Scope (ACAD)
                     {
                         If (_OSI ("Darwin"))
@@ -102,7 +114,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
                             })
                         }
                     }
-
+                    //Fix Auto
                     Device (ALS0)
                     {
                         Name (_HID, "ACPI0008" /* Ambient Light Sensor Device */)  // _HID: Hardware ID
@@ -128,7 +140,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
                             }
                         }
                     }
-
+                    //Add Device
                     Device (DMAC)
                     {
                         Name (_HID, EisaId ("PNP0200") /* PC-class DMA Controller */)  // _HID: Hardware ID
@@ -173,7 +185,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
                             }
                         }
                     }
-
+                    //Add Device
                     Device (EC)
                     {
                         Name (_HID, "ACID0001")  // _HID: Hardware ID
@@ -189,8 +201,23 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
                             }
                         }
                     }
+                    //Enable RTC
+                    Scope (RTC)
+                    {
+                        Method (_STA, 0, NotSerialized)  // _STA: Status
+                        {
+                            If (_OSI ("Darwin"))
+                            {
+                                Return (0x0F)
+                            }
+                            Else
+                            {
+                                Return (\_SB.PCI0.LPCB.RTC.XSTA ())
+                            }
+                        }
+                    }
                 }
-
+                //Add Device
                 Device (MCHC)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
@@ -206,7 +233,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
                         }
                     }
                 }
-
+                //Add Device
                 Device (SRAM)
                 {
                     Name (_ADR, 0x00140002)  // _ADR: Address
@@ -223,7 +250,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
                     }
                 }
             }
-
+            //Add Device Sleep Button
             Device (SLPB)
             {
                 Name (_HID, EisaId ("PNP0C0E") /* Sleep Button Device */)  // _HID: Hardware ID
@@ -239,7 +266,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
                     }
                 }
             }
-
+            //Add Device
             Device (USBX)
             {
                 Name (_ADR, Zero)  // _ADR: Address
@@ -275,7 +302,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
                 }
             }
         }
-
+        //Add Device
         Method (GPRW, 2, NotSerialized)
         {
             If (_OSI ("Darwin"))
@@ -301,7 +328,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "HP250G6", 0x00000000)
 
             Return (XPRW (Arg0, Arg1))
         }
-
+        //Fix Darwin 
         Method (XOSI, 1, NotSerialized)
         {
             Local0 = Package (0x16)
