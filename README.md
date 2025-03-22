@@ -18,7 +18,7 @@
 | Display          | 1366x768                           |
 | Audio            | Realtek ALC282                     |
 | Ram              | 8 Gb ddr4 2400 Mhz                 |
-| Wifi + Bluetooth | AC 3168 (BT No work)               |
+| Wifi + Bluetooth | AC 3168                            |
 | SSD              | Kingston A400 512gb                |
 | SmBios           | MacBookAir8,1                      |
 | BootLoader       | OpenCore                           |
