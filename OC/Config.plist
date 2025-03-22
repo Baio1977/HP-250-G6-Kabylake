@@ -177,112 +177,13 @@
                 <key>SignalAppleOS</key>
                 <false/>
                 <key>SyncRuntimePermissions</key>
-                <false/>
+                <true/>
             </dict>
         </dict>
         <key>DeviceProperties</key>
         <dict>
             <key>Add</key>
             <dict>
-                <key>PciRoot(0x0)/Pci(0x0,0x0)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,0,0</string>
-                    <key>device_type</key>
-                    <string>Host bridge</string>
-                    <key>model</key>
-                    <string>7th Gen Core Processor Host Bridge/DRAM Registers</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,20,0</string>
-                    <key>device_type</key>
-                    <string>USB controller</string>
-                    <key>model</key>
-                    <string>Sunrise Point-LP USB 3.0 xHCI Controller</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x14,0x2)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,20,2</string>
-                    <key>device_type</key>
-                    <string>Signal processing controller</string>
-                    <key>model</key>
-                    <string>Sunrise Point-LP Thermal subsystem</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x16,0x0)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,22,0</string>
-                    <key>device_type</key>
-                    <string>Communication controller</string>
-                    <key>model</key>
-                    <string>Sunrise Point-LP CSME IMEI</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x17,0x0)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,23,0</string>
-                    <key>device_type</key>
-                    <string>SATA controller</string>
-                    <key>model</key>
-                    <string>Sunrise Point-LP SATA Controller [AHCI mode]</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x1C,0x0)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,28,0</string>
-                    <key>device_type</key>
-                    <string>PCI bridge</string>
-                    <key>model</key>
-                    <string>Sunrise Point-LP PCI Express Root Port #5</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,28,0/0,0</string>
-                    <key>device_type</key>
-                    <string>Ethernet controller</string>
-                    <key>model</key>
-                    <string>RTL8111 PCI Express Gigabit Ethernet Controller</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x1C,0x5)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,28,5</string>
-                    <key>device_type</key>
-                    <string>PCI bridge</string>
-                    <key>model</key>
-                    <string>Sunrise Point-LP PCI Express Root Port #6</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x1C,0x5)/Pci(0x0,0x0)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,28,5/0,0</string>
-                    <key>device_type</key>
-                    <string>Network controller</string>
-                    <key>model</key>
-                    <string>Dual Band Wireless-AC 3168NGW [Stone Peak]</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,31,0</string>
-                    <key>device_type</key>
-                    <string>ISA bridge</string>
-                    <key>model</key>
-                    <string>Sunrise Point LPC Controller/eSPI Controller</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x1F,0x2)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,31,2</string>
-                    <key>device_type</key>
-                    <string>Memory controller</string>
-                    <key>model</key>
-                    <string>Sunrise Point-LP PMC</string>
-                </dict>
                 <key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
                 <dict>
                     <key>AAPL,slot-name</key>
@@ -293,15 +194,6 @@
                     <integer>3</integer>
                     <key>model</key>
                     <string>Comet Lake PCH cAVS</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x1F,0x4)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,31,4</string>
-                    <key>device_type</key>
-                    <string>SMBus</string>
-                    <key>model</key>
-                    <string>Sunrise Point-LP SMBus</string>
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
@@ -339,24 +231,6 @@
                     <data>AAAwAQ==</data>
                     <key>model</key>
                     <string>Intel HD Graphics 620</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x4,0x0)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,4,0</string>
-                    <key>device_type</key>
-                    <string>Signal processing controller</string>
-                    <key>model</key>
-                    <string>7th Gen Core Processor Thermal Subsystem</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x8,0x0)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,8,0</string>
-                    <key>device_type</key>
-                    <string>System peripheral</string>
-                    <key>model</key>
-                    <string>7th Gen Core Processor Gaussian Mixture Model</string>
                 </dict>
             </dict>
             <key>Delete</key>
@@ -913,7 +787,7 @@
                 <key>DisableRtcChecksum</key>
                 <false/>
                 <key>ExtendBTFeatureFlags</key>
-                <true/>
+                <false/>
                 <key>ExternalDiskIcons</key>
                 <false/>
                 <key>ForceAquantiaEthernet</key>
@@ -1143,33 +1017,7 @@
             <key>LegacyOverwrite</key>
             <false/>
             <key>LegacySchema</key>
-            <dict>
-                <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
-                <array>
-                    <string>EFILoginHiDPI</string>
-                    <string>EFIBluetoothDelay</string>
-                    <string>LocationServicesEnabled</string>
-                    <string>SystemAudioVolume</string>
-                    <string>SystemAudioVolumeDB</string>
-                    <string>SystemAudioVolumeSaved</string>
-                    <string>bluetoothActiveControllerInfo</string>
-                    <string>bluetoothInternalControllerInfo</string>
-                    <string>flagstate</string>
-                    <string>fmm-computer-name</string>
-                    <string>fmm-mobileme-token-FMM</string>
-                    <string>fmm-mobileme-token-FMM-BridgeHasAccount</string>
-                    <string>nvda_drv</string>
-                    <string>prev-lang:kbd</string>
-                </array>
-                <key>8BE4DF61-93CA-11D2-AA0D-00E098032B8C</key>
-                <array>
-                    <string>Boot0080</string>
-                    <string>Boot0081</string>
-                    <string>Boot0082</string>
-                    <string>BootNext</string>
-                    <string>BootOrder</string>
-                </array>
-            </dict>
+            <dict/>
             <key>WriteFlash</key>
             <true/>
         </dict>
@@ -1184,23 +1032,23 @@
                 <key>AdviseFeatures</key>
                 <false/>
                 <key>MLB</key>
-                <string>C02711301J9HWVPAD</string>
+                <string>C02753200CDJH4RJA</string>
                 <key>MaxBIOSVersion</key>
                 <false/>
                 <key>ProcessorType</key>
                 <integer>0</integer>
                 <key>ROM</key>
-                <data>srAAdU9B</data>
+                <data>NX7HaICk</data>
                 <key>SpoofVendor</key>
                 <false/>
                 <key>SystemMemoryStatus</key>
                 <string>Upgradable</string>
                 <key>SystemProductName</key>
-                <string>MacBookPro14,1</string>
+                <string>MacBookPro15,2</string>
                 <key>SystemSerialNumber</key>
-                <string>C02TFZY1HV29</string>
+                <string>C02W10MFJHCC</string>
                 <key>SystemUUID</key>
-                <string>5C898396-2A6E-4C71-9418-A7CCAEB9F7F8</string>
+                <string>5E031D0A-4951-49C3-A86A-F82957AF18B5</string>
             </dict>
             <key>UpdateDataHub</key>
             <true/>
@@ -1415,7 +1263,7 @@
                 <key>TextRenderer</key>
                 <string>BuiltinGraphics</string>
                 <key>UIScale</key>
-                <integer>-1</integer>
+                <integer>0</integer>
                 <key>UgaPassThrough</key>
                 <false/>
             </dict>
