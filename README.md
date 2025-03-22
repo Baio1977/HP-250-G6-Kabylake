@@ -20,7 +20,7 @@
 | Ram              | 8 Gb ddr4 2400 Mhz                 |
 | Wifi + Bluetooth | AC 3168                            |
 | SSD              | Kingston A400 512gb                |
-| SmBios           | MacBookAir8,1                      |
+| SmBios           | MacBookPro15.2                     |
 | BootLoader       | OpenCore                           |
 
 
