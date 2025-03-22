@@ -128,7 +128,7 @@ jobs:
          file: ./EFI.zip  # Make sure the file path matches
          tag: ${{ github.ref }}
          make_latest: false
-         release_name: EFI Lenovo HP250G6
+         release_name: EFI HP 250G6
          body: ${{ github.event_name != 'release' && github.event.head_commit.message || '' }}
          file_glob: true
          overwrite: true
