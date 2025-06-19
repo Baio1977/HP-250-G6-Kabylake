@@ -36,7 +36,7 @@
 - [x] SpeedStep / Sleep / Wake
 - [x] Touchpad with gesture
 - [x] Brightness Key
-- [x] Wi-Fi
+- [x] Wi-Fi (Install Heliport for Sequoia+)
 - [x] Realtek RTL8111 LAN
 - [x] Cardreader
 - [x] ACPI Battery
