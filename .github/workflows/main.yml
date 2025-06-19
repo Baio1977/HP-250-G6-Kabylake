@@ -70,7 +70,7 @@ jobs:
     - name: Copy Config.plist to EFI/OC
       run: |
         echo "Copying Config.plist to EFI/OC..."
-        cp ./OC/Config.plist ./EFI/OC/
+        cp ./OC/config.plist ./EFI/OC/
 
     - name: Remove all files in EFI/OC/Tools
       run: |
