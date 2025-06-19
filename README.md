@@ -65,6 +65,6 @@
 - [Hackintoshlifeit](https://github.com/Hackintoshlifeit)
 - [rehabman](https://github.com/RehabMan)
 
-- # Thanks @KingFG6938 for collaborating on the Ventura-Sonoma,Sequoia installation tests
+- # Thanks @KingFG6938 for collaborating on the Ventura-Sonoma-Sequoia installation tests
 
 # If you need help please contact us on [Telegram](https://t.me/HackintoshLife_it) or [Web](https://www.hackintoshlife.it/)
