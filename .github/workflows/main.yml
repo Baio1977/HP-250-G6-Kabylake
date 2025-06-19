@@ -1,4 +1,4 @@
-name: Update Artifacts and Release
+name: Update Artifacts and ReleaseMore actions
 
 on:
   push:
@@ -51,7 +51,7 @@ jobs:
 
     - name: Copy Kexts to EFI/OC/Kexts
       run: |
-        KEXT_SOURCE="./EFI/OC/Kexts"  # Adjust this as necessary
+        KEXT_SOURCE="./OC/Kexts"  # Adjust this as necessary
         KEXT_TARGET="./EFI/OC/Kexts"
         mkdir -p "$KEXT_TARGET"
         if [ -d "$KEXT_SOURCE" ]; then
@@ -65,12 +65,12 @@ jobs:
     - name: Copy Resources to EFI/OC
       run: |
         echo "Copying Resources to EFI/OC..."
-        cp -r ./EFI/OC/Resources ./EFI/OC/
+        cp -r ./OC/Resources ./EFI/OC/
         
     - name: Copy Config.plist to EFI/OC
       run: |
         echo "Copying Config.plist to EFI/OC..."
-        cp ./EFI/OC/Config.plist ./EFI/OC/
+        cp ./OC/Config.plist ./EFI/OC/
 
     - name: Remove all files in EFI/OC/Tools
       run: |
@@ -91,12 +91,12 @@ jobs:
     - name: Copy HfsPlus.efi to EFI/OC/Drivers
       run: |
         echo "Copying HfsPlus.efi to EFI/OC/Drivers..."
-        cp ./EFI/OC/Drivers/HfsPlus.efi ./EFI/OC/Drivers/
+        cp ./OC/Drivers/HfsPlus.efi ./EFI/OC/Drivers/
 
     - name: Copy SSDT-HP250G6.aml to EFI/OC/ACPI
       run: |
         echo "Copying SSDT-HP250G6.aml to EFI/OC/ACPI..."
-        cp ./EFI/OC/ACPI/SSDT-HP250G6.aml ./EFI/OC/ACPI/
+        cp ./OC/ACPI/SSDT-HP250G6.aml ./EFI/OC/ACPI/
 
     - name: Clean up
       run: |
@@ -119,7 +119,7 @@ jobs:
       with:
         name: HP250G6-EFI
         path: EFI.zip
-        
+
     - name: Upload build
       uses: svenstaro/upload-release-action@2.9.0
       if: github.event_name != 'pull_request'
@@ -128,6 +128,7 @@ jobs:
          file: ./EFI.zip  # Make sure the file path matches
          tag: ${{ github.ref }}
          make_latest: false
+         release_name: EFI Lenovo HP250G6
          release_name: EFI HP 250G6
          body: ${{ github.event_name != 'release' && github.event.head_commit.message || '' }}
          file_glob: true
