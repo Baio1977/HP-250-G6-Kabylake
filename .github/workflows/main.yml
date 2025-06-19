@@ -51,7 +51,7 @@ jobs:
 
     - name: Copy Kexts to EFI/OC/Kexts
       run: |
-        KEXT_SOURCE="./OC/Kexts"  # Adjust this as necessary
+        KEXT_SOURCE=".EFI/OC/Kexts"  # Adjust this as necessary
         KEXT_TARGET="./EFI/OC/Kexts"
         mkdir -p "$KEXT_TARGET"
         if [ -d "$KEXT_SOURCE" ]; then
@@ -65,12 +65,12 @@ jobs:
     - name: Copy Resources to EFI/OC
       run: |
         echo "Copying Resources to EFI/OC..."
-        cp -r ./OC/Resources ./EFI/OC/
+        cp -r ./EFI/OC/Resources ./EFI/OC/
         
     - name: Copy Config.plist to EFI/OC
       run: |
         echo "Copying Config.plist to EFI/OC..."
-        cp ./OC/Config.plist ./EFI/OC/
+        cp ./EFI/OC/Config.plist ./EFI/OC/
 
     - name: Remove all files in EFI/OC/Tools
       run: |
@@ -91,12 +91,12 @@ jobs:
     - name: Copy HfsPlus.efi to EFI/OC/Drivers
       run: |
         echo "Copying HfsPlus.efi to EFI/OC/Drivers..."
-        cp ./OC/Drivers/HfsPlus.efi ./EFI/OC/Drivers/
+        cp ./EFI/OC/Drivers/HfsPlus.efi ./EFI/OC/Drivers/
 
     - name: Copy SSDT-HP250G6.aml to EFI/OC/ACPI
       run: |
         echo "Copying SSDT-HP250G6.aml to EFI/OC/ACPI..."
-        cp ./OC/ACPI/SSDT-HP250G6.aml ./EFI/OC/ACPI/
+        cp ./EFI/OC/ACPI/SSDT-HP250G6.aml ./EFI/OC/ACPI/
 
     - name: Clean up
       run: |
