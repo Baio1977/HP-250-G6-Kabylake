@@ -154,7 +154,23 @@
         <dict>
             <key>Add</key>
             <dict>
-                <key>#PciRoot(0x0)/Pci(0x2,0x0)</key>
+                <key>PciRoot(0x0)/Pci(0x17,0x0)</key>
+                <dict>
+                    <key>compatible</key>
+                    <string>pci8086,a182</string>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+                <dict>
+                    <key>AAPL,slot-name</key>
+                    <string>Internal</string>
+                    <key>device_type</key>
+                    <string>Audio device</string>
+                    <key>layout-id</key>
+                    <integer>3</integer>
+                    <key>model</key>
+                    <string>HD Audio</string>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
                     <key>AAPL,GfxYTile</key>
                     <data>AQAAAA==</data>
@@ -162,8 +178,6 @@
                     <data>AADAhw==</data>
                     <key>device-id</key>
                     <data>FlkAAA==</data>
-                    <key>device_type</key>
-                    <string>VGA compatible controller</string>
                     <key>force-online</key>
                     <data>AQAAAA==</data>
                     <key>framebuffer-con1-alldata</key>
@@ -181,62 +195,7 @@
                     <key>framebuffer-stolenmem</key>
                     <data>AAAwAQ==</data>
                     <key>model</key>
-                    <string>Intel HD Graphics 620</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x17,0x0)</key>
-                <dict>
-                    <key>compatible</key>
-                    <string>pci8086,a182</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
-                <dict>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal@0,31,3</string>
-                    <key>device_type</key>
-                    <string>Audio device</string>
-                    <key>layout-id</key>
-                    <integer>3</integer>
-                    <key>model</key>
-                    <string>Comet Lake PCH cAVS</string>
-                </dict>
-                <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-                <dict>
-                    <key>AAPL,GfxYTile</key>
-                    <data>AQAAAA==</data>
-                    <key>AAPL,ig-platform-id</key>
-                    <data>AAAWWQ==</data>
-                    <key>AAPL,slot-name</key>
-                    <string>Internal</string>
-                    <key>device_type</key>
-                    <string>VGA compatible controller</string>
-                    <key>enable-hdmi-dividers-fix</key>
-                    <data>AQAAAA==</data>
-                    <key>force-online</key>
-                    <data>AQAAAA==</data>
-                    <key>framebuffer-con1-enable</key>
-                    <data>AQAAAA==</data>
-                    <key>framebuffer-con1-type</key>
-                    <data>AAgAAA==</data>
-                    <key>framebuffer-con2-busid</key>
-                    <data>AAAAAA==</data>
-                    <key>framebuffer-con2-enable</key>
-                    <data>AQAAAA==</data>
-                    <key>framebuffer-con2-flags</key>
-                    <data>IAAAAA==</data>
-                    <key>framebuffer-con2-index</key>
-                    <data>/////w==</data>
-                    <key>framebuffer-con2-pipe</key>
-                    <data>AAAAAA==</data>
-                    <key>framebuffer-con2-type</key>
-                    <data>AQAAAA==</data>
-                    <key>framebuffer-fbmem</key>
-                    <data>AACQAA==</data>
-                    <key>framebuffer-patch-enable</key>
-                    <data>AQAAAA==</data>
-                    <key>framebuffer-stolenmem</key>
-                    <data>AAAwAQ==</data>
-                    <key>model</key>
-                    <string>Intel HD Graphics 620</string>
+                    <string>Intel UHD Graphics 620</string>
                 </dict>
             </dict>
             <key>Delete</key>
@@ -656,7 +615,7 @@
                     <key>MaxKernel</key>
                     <string>23.99.99</string>
                     <key>MinKernel</key>
-                    <string>23.0.0</string>
+                    <string></string>
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
@@ -767,7 +726,7 @@
                 <key>CustomSMBIOSGuid</key>
                 <true/>
                 <key>DisableIoMapper</key>
-                <false/>
+                <true/>
                 <key>DisableIoMapperMapping</key>
                 <false/>
                 <key>DisableLinkeditJettison</key>
@@ -855,7 +814,7 @@
                 <key>AppleDebug</key>
                 <false/>
                 <key>ApplePanic</key>
-                <false/>
+                <true/>
                 <key>DisableWatchDog</key>
                 <true/>
                 <key>DisplayDelay</key>
@@ -964,7 +923,7 @@
                     <key>bluetoothInternalControllerInfo</key>
                     <data>AAAAAAAAAAAAAAAAAAA=</data>
                     <key>boot-args</key>
-                    <string>-v debug=0x100 keepsyms=1</string>
+                    <string>-v watchdog=0</string>
                     <key>csr-active-config</key>
                     <data>AAAAAA==</data>
                     <key>prev-lang:kbd</key>
@@ -1006,7 +965,7 @@
                 <key>AdviseFeatures</key>
                 <false/>
                 <key>MLB</key>
-                <string>C028254014NJH4R8C</string>
+                <string>C02806270CDJH4R8C</string>
                 <key>MaxBIOSVersion</key>
                 <false/>
                 <key>ProcessorType</key>
@@ -1020,9 +979,9 @@
                 <key>SystemProductName</key>
                 <string>MacBookPro15,2</string>
                 <key>SystemSerialNumber</key>
-                <string>C02WW0AHJHCC</string>
+                <string>C02W70W5JHCC</string>
                 <key>SystemUUID</key>
-                <string>E6ABE7BC-DB72-4917-A288-006C56657705</string>
+                <string>113571BA-FB57-4823-B25D-EA7543986379</string>
             </dict>
             <key>UpdateDataHub</key>
             <true/>
