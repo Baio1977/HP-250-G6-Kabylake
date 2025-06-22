@@ -15,7 +15,7 @@
 | Display          | 1366x768                           |
 | Audio            | Realtek ALC282                     |
 | Ram              | 8 Gb ddr4 2400 Mhz                 |
-| Wifi + Bluetooth | AC 3168                            |
+| Wifi + Bluetooth | AC 3168(Use Heliport app. Sequoia+)|
 | SSD              | Kingston A400 512gb                |
 | SmBios           | MacBookPro15.2                     |
 | BootLoader       | OpenCore                           |
