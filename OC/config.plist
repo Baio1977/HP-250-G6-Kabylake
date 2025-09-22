@@ -154,39 +154,53 @@
         <dict>
             <key>Add</key>
             <dict>
-                <key>PciRoot(0x0)/Pci(0x17,0x0)</key>
+                <key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
                 <dict>
-                    <key>compatible</key>
-                    <string>pci8086,a182</string>
+                    <key>AAPL,slot-name</key>
+                    <string>Internal@0,31,0</string>
+                    <key>device_type</key>
+                    <string>ISA bridge</string>
+                    <key>model</key>
+                    <string>Sunrise Point LPC Controller/eSPI Controller</string>
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
                 <dict>
                     <key>AAPL,slot-name</key>
-                    <string>Internal</string>
+                    <string>Internal@0,31,3</string>
                     <key>device_type</key>
                     <string>Audio device</string>
                     <key>layout-id</key>
                     <integer>3</integer>
                     <key>model</key>
-                    <string>HD Audio</string>
+                    <string>Comet Lake PCH cAVS</string>
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
                     <key>AAPL,GfxYTile</key>
                     <data>AQAAAA==</data>
                     <key>AAPL,ig-platform-id</key>
-                    <data>AADAhw==</data>
-                    <key>device-id</key>
-                    <data>FlkAAA==</data>
-                    <key>force-online</key>
+                    <data>AAAWWQ==</data>
+                    <key>AAPL,slot-name</key>
+                    <string>Internal</string>
+                    <key>device_type</key>
+                    <string>VGA compatible controller</string>
+                    <key>enable-hdmi-dividers-fix</key>
                     <data>AQAAAA==</data>
-                    <key>framebuffer-con1-alldata</key>
-                    <data>AQUJAAAIAACHAQAA</data>
                     <key>framebuffer-con1-enable</key>
                     <data>AQAAAA==</data>
-                    <key>framebuffer-con2-alldata</key>
-                    <string>&lt;02040a00 00080000 87010000></string>
+                    <key>framebuffer-con1-type</key>
+                    <data>AAgAAA==</data>
+                    <key>framebuffer-con2-busid</key>
+                    <data>AAAAAA==</data>
                     <key>framebuffer-con2-enable</key>
+                    <data>AQAAAA==</data>
+                    <key>framebuffer-con2-flags</key>
+                    <data>IAAAAA==</data>
+                    <key>framebuffer-con2-index</key>
+                    <data>/////w==</data>
+                    <key>framebuffer-con2-pipe</key>
+                    <data>AAAAAA==</data>
+                    <key>framebuffer-con2-type</key>
                     <data>AQAAAA==</data>
                     <key>framebuffer-fbmem</key>
                     <data>AACQAA==</data>
@@ -195,7 +209,7 @@
                     <key>framebuffer-stolenmem</key>
                     <data>AAAwAQ==</data>
                     <key>model</key>
-                    <string>Intel UHD Graphics 620</string>
+                    <string>Intel HD Graphics 620</string>
                 </dict>
             </dict>
             <key>Delete</key>
@@ -427,7 +441,7 @@
                     <key>BundlePath</key>
                     <string>RestrictEvents.kext</string>
                     <key>Comment</key>
-                    <string>V1.1.6</string>
+                    <string>V1.1.7</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -923,7 +937,7 @@
                     <key>bluetoothInternalControllerInfo</key>
                     <data>AAAAAAAAAAAAAAAAAAA=</data>
                     <key>boot-args</key>
-                    <string>-v watchdog=0</string>
+                    <string>-v watchdog=0 -btlfxboardid</string>
                     <key>csr-active-config</key>
                     <data>AAAAAA==</data>
                     <key>prev-lang:kbd</key>
@@ -1231,7 +1245,7 @@
                 <key>DeviceProperties</key>
                 <false/>
                 <key>FirmwareVolume</key>
-                <false/>
+                <true/>
                 <key>HashServices</key>
                 <false/>
                 <key>OSInfo</key>
